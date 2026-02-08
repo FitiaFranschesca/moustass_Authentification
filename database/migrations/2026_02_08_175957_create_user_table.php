@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id(); // ID auto-incrémenté
-            $table->string('email')->unique(); // email unique
-            $table->enum('role', ['ADMIN', 'CLIENT'])->default('CLIENT'); // rôle
-            $table->string('password'); // mot de passe hashé
-            $table->string('client_secret_hash')->nullable(); // hash HMAC, peut être null
-            $table->enum('status', ['active', 'disabled'])->default('active'); // statut
-            $table->timestamps(); // created_at et updated_at
+            $table->id(); 
+            $table->string('email')->unique(); 
+            $table->enum('role', ['ADMIN', 'CLIENT'])->default('CLIENT'); 
+            $table->string('password'); 
+            $table->string('client_secret_hash')->nullable(); // hash HMAC
+            $table->enum('status', ['active', 'disabled'])->default('active');
+            $table->timestamps();
         });
     }
 

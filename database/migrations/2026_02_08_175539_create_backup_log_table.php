@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('backups_log', function (Blueprint $table) {
-            $table->id(); // ID auto-incrémenté
+            $table->id(); 
             $table->enum('type', ['full', 'incremental']); // type de backup
-            $table->string('file_path'); // chemin du fichier
-            $table->enum('status', ['success', 'failed']); // statut
-            $table->text('notes')->nullable(); // notes optionnelles
-            $table->timestamp('created_at'); // date de création
+            $table->string('file_path'); 
+            $table->enum('status', ['success', 'failed']); 
+            $table->timestamp('created_at'); 
         });
     }
 

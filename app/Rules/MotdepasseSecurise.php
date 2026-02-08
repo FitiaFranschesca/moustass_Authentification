@@ -5,7 +5,7 @@ namespace App\Rules;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class StrongPassword implements ValidationRule
+class MotdepasseSecurise implements ValidationRule
 {
     private int $minLength;
 
